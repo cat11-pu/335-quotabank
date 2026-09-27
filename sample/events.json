@@ -1,0 +1,14 @@
+{
+  "budget": 1,
+  "pool": 10,
+  "room_error_code": "E_NO_ROOM",
+  "loan_error_code": "E_NO_LOAN",
+  "event_error_code": "E_BAD_EVENT",
+  "state": { "loans": [], "left": 10, "borrows": 0, "ledger": [], "applied": [] },
+  "events": [
+    { "id": 1, "kind": "borrow", "tenant": "a", "amount": 4 },
+    { "id": 2, "kind": "borrow", "tenant": "b", "amount": 5 },
+    { "id": 3, "kind": "give", "tenant": "a", "amount": 2 },
+    { "id": 4, "kind": "borrow", "tenant": "b", "amount": 1 }
+  ]
+}
