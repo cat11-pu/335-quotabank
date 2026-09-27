@@ -1,8 +1,13 @@
-// bank.js：配额池（基线：一律原样返回）
+// bank.js：配额池
 export function borrowOf(loans, tenant) {
+  for (const row of loans || []) {
+    if (row[0] === tenant) return row[1];
+  }
   return 0;
 }
 
 export function leftOf(pool, loans) {
-  return 0;
+  let used = 0;
+  for (const row of loans || []) used += row[1];
+  return pool - used;
 }
